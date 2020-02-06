@@ -35,7 +35,7 @@ def self.all()
 end
 
 def self.find(id)
-  sql = "SELECT * FRM students WHERE id = $1"
+  sql = "SELECT * FROM students WHERE id = $1"
   values = [id]
   student = SqlRunner.run(sql, values)
   return Student.new(student.first)

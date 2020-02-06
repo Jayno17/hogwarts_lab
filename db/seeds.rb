@@ -44,3 +44,27 @@ student5 = Student.new({
   })
 
 student5.save()
+
+house1 = House.new({
+  "name" => "Gryffindor",
+  "logo" => "logo goes here"
+  })
+house1.save()
+
+house2 = House.new({
+  "name" => "Ravenclaw",
+  "logo" => "logo goes here"
+  })
+house2.save()
+
+house3 = House.new({
+  "name" => "Hufflepuff",
+  "logo" => "logo goes here"
+  })
+house3.save()
+
+house4 = House.new({
+  "name" => "Slytherin",
+  "logo" => "logo goes here"
+  })
+house4.save()
