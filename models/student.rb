@@ -23,4 +23,22 @@ student_data = SqlRunner.run(sql, values)
 @id = student_data.first["id"].to_i
 end
 
+def pretty_name()
+  return "#{@first_name} #{@last_name}"
+end
+
+def self.all()
+  sql = "SELECT * FROM students"
+  students =SqlRunner.run(sql)
+  result = students.map{ |student| Student.new(student)}
+  return result
+end
+
+def self.find(id)
+  sql = "SELECT * FRM students WHERE id = $1"
+  values = [id]
+  student = SqlRunner.run(sql, values)
+  return Student.new(student.first)
+end
+
 end
