@@ -1,4 +1,5 @@
 require_relative('../models/student')
+require_relative('../models/house')
 
 student1 = Student.new({
   "first_name" => "Harry",
