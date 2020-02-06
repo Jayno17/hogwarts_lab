@@ -16,12 +16,12 @@ get '/students/new' do
 end
 
 get '/students/:id'do
-  @students = Student.find(params[:id])
+  @student = Student.find(params[:id])
   erb(:show)
 end
 
 post '/students' do
-  @students = Student.new(params)
-  @students .save()
+  @student = Student.new(params)
+  @student.save()
   redirect "/students"
 end

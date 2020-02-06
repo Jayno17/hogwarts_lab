@@ -17,7 +17,6 @@ def save()
   @id = house_data.first["id"].to_i
 end
 
-
 def self.all()
   sql = "SELECT * FROM houses"
   houses = SqlRunner.run(sql)
@@ -31,5 +30,5 @@ def self.find(id)
   house = SqlRunner.run(sql, values)
   result = House.new(house.first)
   return result
-end 
+end
 end
